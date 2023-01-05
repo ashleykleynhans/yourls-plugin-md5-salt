@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Set HMAC algorithm to MD5
-Plugin URI: https://github.com/ashleykleynhans
+Plugin URI: https://github.com/ashleykleynhans/yourls-plugin-md5-salt
 Description: Backwards compatibility for yourls_salt to use md5 instead of sha256 algorithm.
 Version: 1.0
 Author: Ashley Kleynhans
