@@ -24,7 +24,6 @@ cause API calls to stop working.
     ```
 2.  Copy the plugin to your YOURLS code
     ```bash
-    cd yourls-plugin-md5-salt
     cp -r yourls-plugin-md5-salt /var/www/html/user/plugins
     ```
 3.  Enable the plugin in the YOURLS admin interface in your web browser.
