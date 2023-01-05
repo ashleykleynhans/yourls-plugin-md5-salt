@@ -1,15 +1,16 @@
 <?php
 /*
-Plugin Name: Set HMAC algorithm to MD5
-Plugin URI: https://github.com/ashleykleynhans/yourls-plugin-md5-salt
-Description: Backwards compatibility for yourls_salt to use md5 instead of sha256 algorithm.
+Plugin Name: Legacy MD5 salt function
+Plugin URI: https://github.com/ashleykleynhans
+Description: Backwards compatibility for yourls_salt to use an md5 instead of sha256 hash.
 Version: 1.0
 Author: Ashley Kleynhans
 Author URI: https://github.com/ashleykleynhans
 */
 
-yourls_add_filter('hmac_algo', 'set_hmac_algo_to_md5');
+yourls_add_filter('yourls_salt', 'legacy_md5_salt');
 
-function set_hmac_algo_to_md5() {
-    return 'md5';
+function legacy_md5_salt($sauted_hash, $original_value) {
+    $salt = defined('YOURLS_COOKIEKEY') ? YOURLS_COOKIEKEY : md5(__FILE__) ;
+    return md5($original_value . $salt);
 }
