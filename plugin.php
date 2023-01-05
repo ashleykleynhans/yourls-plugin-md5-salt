@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Legacy MD5 salt function
+Plugin Name: Legacy MD5 salt
 Plugin URI: https://github.com/ashleykleynhans
 Description: Backwards compatibility for yourls_salt to use an md5 instead of sha256 hash.
 Version: 1.0
